@@ -1,23 +1,18 @@
 
-
-function speedDetector() {
-    let speed =(180);
-    speed = Number(speed);
-
-    if (isNaN(speed) || speed < 0) {
-        console.log("Invalid input. Please enter a valid speed.");
+function speedlimit(speed){
+    if(speed <=70){
+        console.log("Okay");
+   }else if(speed > 70){
+    let excessSpeed = (speed - 70);
+    let points = (excessSpeed - excessSpeed%5)/5 ; 
+    if(points <= 12){
+        console.log(points);
+    }else{
+        console.log("License Suspended");
     }
-    const speedLimit = 70;
-    const kmPerDemeritPoint = 5;
-
-    if (speed <= speedLimit) {
-        console.log("Ok");
-    } else {
-        const demeritPoints = Math.floor((speed - speedLimit) / kmPerDemeritPoint);
-        console.log(`Points: ${demeritPoints}`);
-        if (demeritPoints > 12) {
-            console.log("License suspended");
-        }
     }
 }
-console.log(speedDetector());
+   
+speedlimit(130);
+    
+    

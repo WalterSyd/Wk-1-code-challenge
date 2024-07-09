@@ -1,3 +1,5 @@
+
+
 function calculateNetSalary(basicSalary, benefits) {
     const grossSalary = basicSalary + benefits;
     let payee = calculatePAYE(grossSalary);
