@@ -1,4 +1,4 @@
-
+let speedLimit = prompt('input the speed');
 function speedlimit(speed){
     if(speed <=70){
         console.log("Okay");
